@@ -10,6 +10,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="sirmags_style.css">
+    <style>
+        .founder-img-glow {
+            border: 1px solid rgba(0, 210, 254, 0.3);
+            box-shadow: 0 0 25px rgba(0, 210, 254, 0.15);
+            transition: all 0.3s ease;
+        }
+        .founder-img-glow:hover {
+            border-color: var(--primary-color, #00d2fe);
+            box-shadow: 0 0 35px rgba(0, 210, 254, 0.35);
+            transform: translateY(-3px);
+        }
+    </style>
 </head>
 <body>
 
@@ -51,17 +63,29 @@
                     </div>
                 </div>
                 <div class="col-lg-5 d-none d-lg-block">
-                    <div class="p-4 glass-card">
-                        <div class="d-flex gap-2 mb-3">
-                            <span style="width:10px;height:10px;background:#ff5f56;border-radius:50%"></span>
-                            <span style="width:10px;height:10px;background:#ffbd2e;border-radius:50%"></span>
-                            <span style="width:10px;height:10px;background:#27c93f;border-radius:50%"></span>
+                    <!-- FOUNDER CARD & CODE MATRIX HUB -->
+                    <div class="p-4 glass-card position-relative">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="d-flex gap-2">
+                                <span style="width:10px;height:10px;background:#ff5f56;border-radius:50%"></span>
+                                <span style="width:10px;height:10px;background:#ffbd2e;border-radius:50%"></span>
+                                <span style="width:10px;height:10px;background:#27c93f;border-radius:50%"></span>
+                            </div>
+                            <span class="badge bg-dark border border-info font-monospace small px-2 py-1" style="font-size: 0.65rem; color: #00d2fe;">
+                                <i class="fa-solid fa-shield-halved me-1"></i> FOUNDER NODE
+                            </span>
                         </div>
-                        <pre class="m-0 tech-mono" style="color: #a9b7c6; font-size: 0.78rem; overflow-x: auto; line-height: 1.6;">
+
+                        <!-- Founder Image Display -->
+                        <div class="text-center mb-3">
+                            <img src="founder_magsino.jpg" alt="Jason Cabalag Magsino - Founder" class="img-fluid rounded-3 founder-img-glow" style="max-height: 220px; width: 100%; object-fit: cover; object-position: top;">
+                        </div>
+
+                        <pre class="m-0 tech-mono" style="color: #a9b7c6; font-size: 0.75rem; overflow-x: auto; line-height: 1.5;">
 <code><span style="color: #cc7832">const</span> <span style="color: #9876aa">DeveloperNode</span> = {
     alias: <span style="color: #6a8759">"Sir Mags"</span>,
-    stack: [<span style="color: #6a8759">"PHP"</span>, <span style="color: #6a8759">"CodeIgniter"</span>, <span style="color: #6a8759">"AJAX"</span>, <span style="color: #6a8759">"JS"</span>, <span style="color: #6a8759">"React Native (Basic)"</span>],
-    serverless: <span style="color: #cc7832">true</span>,
+    role: <span style="color: #6a8759">"Founder & Solutions Architect"</span>,
+    stack: [<span style="color: #6a8759">"PHP"</span>, <span style="color: #6a8759">"CodeIgniter"</span>, <span style="color: #6a8759">"AJAX"</span>, <span style="color: #6a8759">"JS"</span>],
     location: <span style="color: #6a8759">"Nasugbu, Batangas"</span>,
     ready: <span style="color: #cc7832">function</span>() {
         return <span style="color: #6a8759">"System Fully Compiled on Web Shared Hosting & VPS"</span>;
@@ -75,30 +99,50 @@
 
     <section id="profile" class="py-5 bg-black bg-opacity-30 reveal-element">
         <div class="container py-4">
-            <div class="row g-4">
-                <div class="col-lg-6">
+            <div class="row g-4 align-items-stretch">
+                <!-- Profile Avatar Card -->
+                <div class="col-lg-4">
+                    <div class="p-4 glass-card h-100 text-center d-flex flex-column align-items-center justify-content-center">
+                        <div class="position-relative mb-3">
+                            <img src="founder_magsino.jpg" alt="Jason Cabalag Magsino" class="img-fluid rounded-circle border border-info p-1 founder-img-glow" style="width: 170px; height: 170px; object-fit: cover; object-position: top;">
+                            <span class="position-absolute bottom-0 end-0 badge rounded-pill bg-success border border-dark" style="font-size: 0.65rem;">
+                                ONLINE
+                            </span>
+                        </div>
+                        <h3 class="text-white fw-bold mb-1 fs-5">Jason Cabalag Magsino</h3>
+                        <p class="tech-headline mb-3" style="color: var(--primary-color, #00d2fe); font-size: 0.8rem; letter-spacing: 0.5px;">[ FOUNDER & LEAD ARCHITECT ]</p>
+                        <p class="text-secondary small mb-0" style="line-height: 1.6; font-size: 0.82rem;">
+                            Full-Stack Software Engineer specializing in custom MVC enterprise frameworks, automated academic infrastructure, and real-time backend systems.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Academic Recognition -->
+                <div class="col-lg-4">
                     <div class="p-4 glass-card h-100">
                         <div class="p-2 d-inline-block mb-3" style="background: rgba(0, 210, 254, 0.03); border-left: 2px solid var(--primary-color);">
                             <span class="tech-headline" style="color: var(--primary-color); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.5px;">ACADEMIC RECOGNITION</span>
                         </div>
-                        <h3 class="text-white fw-bold mb-2 fs-4">Batangas State University</h3>
-                        <p class="text-info small mb-4">ARASOF Nasugbu Campus | BS Information Technology (Batch 2019)</p>
-                        <p class="text-secondary small mb-0" style="line-height: 1.8;">Acquired disciplined system training in modular programming paradigms, optimized query planning, and system verification routines. This computational background shapes the efficient operational metrics maintained on all client platforms today.</p>
+                        <h3 class="text-white fw-bold mb-2 fs-5">Batangas State University</h3>
+                        <p class="text-info small mb-3">ARASOF Nasugbu Campus | BS Information Technology (Batch 2019)</p>
+                        <p class="text-secondary small mb-0" style="line-height: 1.7;">Acquired disciplined system training in modular programming paradigms, optimized query planning, and system verification routines. This computational background shapes the efficient operational metrics maintained on all client platforms today.</p>
                     </div>
                 </div>
-                <div class="col-lg-6">
+
+                <!-- Engine Metrics -->
+                <div class="col-lg-4">
                     <div class="p-4 glass-card h-100">
                         <div class="p-2 d-inline-block mb-3" style="background: rgba(0, 210, 254, 0.03); border-left: 2px solid var(--primary-color);">
                             <span class="tech-headline" style="color: var(--primary-color); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.5px;">COMPETENCY VECTOR</span>
                         </div>
-                        <h3 class="text-white fw-bold mb-4 fs-4">Engine Metrics</h3>
+                        <h3 class="text-white fw-bold mb-3 fs-5">Engine Metrics</h3>
                         
                         <div class="mb-3">
                             <div class="d-flex justify-content-between text-secondary small mb-1"><span>PHP (Core / Framework Architecture)</span><span>95%</span></div>
                             <div class="progress"><div class="progress-bar" role="progressbar" style="width: 95%"></div></div>
                         </div>
                         <div class="mb-3">
-                            <div class="d-flex justify-content-between text-secondary small mb-1"><span>Asynchronous AJAX Transaction Pipelines</span><span>95%</span></div>
+                            <div class="d-flex justify-content-between text-secondary small mb-1"><span>Asynchronous AJAX Transactions</span><span>95%</span></div>
                             <div class="progress"><div class="progress-bar" role="progressbar" style="width: 95%"></div></div>
                         </div>
                         <div class="mb-3">
@@ -110,7 +154,7 @@
                             <div class="progress"><div class="progress-bar" role="progressbar" style="width: 90%"></div></div>
                         </div>
                         <div>
-                            <div class="d-flex justify-content-between text-secondary small mb-1"><span>React Native (Foundational Cross-Platform Mobile)</span><span>55%</span></div>
+                            <div class="d-flex justify-content-between text-secondary small mb-1"><span>React Native (Mobile Development)</span><span>55%</span></div>
                             <div class="progress"><div class="progress-bar" role="progressbar" style="width: 55%; background-color: rgba(0, 210, 254, 0.5);"></div></div>
                         </div>
                     </div>
@@ -361,7 +405,6 @@
         // ANTI-INSPECT & SECURITY CORE MATRIX
         // ==========================================
         
-        // 1. Disable Right Click with Cyber SweetAlert2
         document.addEventListener('contextmenu', function(e) {
             e.preventDefault();
             Swal.fire({
@@ -377,24 +420,19 @@
             });
         });
         
-        // 2. Disable Common DevTools Keyboard Shortcuts
         document.addEventListener('keydown', function(e) {
-            // F12
             if (e.key === 'F12') {
                 e.preventDefault();
                 triggerSecurityAlert();
             }
-            // Ctrl+Shift+I (Inspect), Ctrl+Shift+J (Console), Ctrl+Shift+C (Elements)
             if (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'i' || e.key === 'J' || e.key === 'j' || e.key === 'C' || e.key === 'c')) {
                 e.preventDefault();
                 triggerSecurityAlert();
             }
-            // Ctrl+U (View Source)
             if (e.ctrlKey && (e.key === 'U' || e.key === 'u')) {
                 e.preventDefault();
                 triggerSecurityAlert();
             }
-            // Ctrl+S (Save Page)
             if (e.ctrlKey && (e.key === 'S' || e.key === 's')) {
                 e.preventDefault();
                 triggerSecurityAlert();
@@ -418,7 +456,6 @@
         // PORTFOLIO ENGINE SCRIPTS
         // ==========================================
 
-        // 1. CYBER BLUE MATRIX LATTICE CANVAS ENGINE
         const canvas = document.getElementById('particleCanvas');
         const ctx = canvas.getContext('2d');
         let particles = [];
@@ -496,7 +533,6 @@
         }
         animateParticles();
 
-        // 2. STACK-SPECIFIC CONSOLE TYPEWRITER ENGINE (React Native Included)
         const concepts = ["PHP ENGINE DEVELOPER.", "CODEIGNITER SYSTEMS ARCHITECT.", "REACT NATIVE MOBILE EXPLORER.", "AJAX LOW-LATENCY SPECIALIST.", "JAVASCRIPT DOM AUTOMATOR."];
         let wordIdx = 0, charIdx = 0, isDeleting = false;
         const targetElement = document.getElementById("typewriter");
@@ -524,7 +560,6 @@
         }
         setTimeout(executionTypeLoop, 500);
 
-        // 3. CORE INTERSECTION ELEMENT REVEAL RECTIFIER
         const contentObserver = new IntersectionObserver((entries) => {
             entries.forEach(e => {
                 if(e.isIntersecting) e.target.classList.add('active');
@@ -532,7 +567,6 @@
         }, { threshold: 0.05 });
         document.querySelectorAll('.reveal-element').forEach(el => contentObserver.observe(el));
 
-        // 4. LOW-OVERHEAD INTERSECTION SCROLLSPY CORE MODULE
         const sections = document.querySelectorAll("section");
         const navLinks = document.querySelectorAll("#navContainer .nav-link");
 
@@ -552,7 +586,6 @@
 
         sections.forEach((section) => scrollSpyObserver.observe(section));
 
-        // 5. SECURE PURE JS / FETCH EMAIL API HANDSHAKE HANDLER
         $(document).ready(function() {
             $('.navbar-nav a').on('click', function(){
                 if($('.navbar-toggler').is(':visible')) {
